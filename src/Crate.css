@@ -1,0 +1,22 @@
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.crate {
+	width: 200px;
+	height: 200px;
+
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.crate:hover {
+	outline: 2px solid lightblue;
+	-moz-outline-radius: 5%;
+	box-shadow: 0 0 5px 2px lightblue;
+}
+
+.crate-overdrive {
+	background: center/80% no-repeat url('/crates/overdrive.png');
+}
