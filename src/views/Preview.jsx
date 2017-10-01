@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Preview.css';
 
-const Preview = ({crateType, onBackClick}) => (
+const Preview = ({crateType, onBackClick, onOpenClick}) => (
 	<div className="crate-preview">
 		<h1>
 			{crateType.description}
@@ -13,6 +13,7 @@ const Preview = ({crateType, onBackClick}) => (
 				<div className="crate-item">{item}</div>
 			))}
 		</div>
+		<button onClick={onOpenClick}>Open</button>
 		<button onClick={onBackClick}>Back to crates</button>
 	</div>
 );

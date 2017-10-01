@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Crates from './views/Crates';
 import Preview from './views/Preview';
+import Opening from './views/Opening';
 import crateTypes from './crateTypes';
 
 class App extends Component {
@@ -24,7 +25,15 @@ class App extends Component {
     case 'preview':
       screen = <Preview
         onBackClick={() => this.setState({currentScreen: 'crates'})}
+        onOpenClick={() => this.setState({currentScreen: 'opening'})}
         crateType={this.state.crateType}
+      />
+      break;
+
+    case 'opening':
+      screen = <Opening
+        crate={this.state.crateType}
+        onBackClick={() => this.setState({currentScreen: 'preview'})}
       />
       break;
 
