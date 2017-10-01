@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Crate from '../Crate';
+import './Crates.css';
 
 class Crates extends Component {
 	render() {
 		return (
-			<div className="App">
-				<div className="App-header">
+			<div>
+				<div>
 					<h1>Choose crate to open:</h1>
 				</div>
 				<div className="cratesList">

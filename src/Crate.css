@@ -11,6 +11,10 @@ a {
 	flex-direction: column-reverse;
 }
 
+.crate-desc {
+	text-align: center;
+}
+
 .crate:hover {
 	outline: 2px solid lightblue;
 	-moz-outline-radius: 5%;

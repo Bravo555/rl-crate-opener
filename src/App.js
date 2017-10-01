@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Crates from './views/Crates';
 import Preview from './views/Preview';
 import crateTypes from './crateTypes';
