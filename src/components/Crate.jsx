@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import crateTypes from './crateTypes.js';
-
+import crateTypes from '../crateTypes.js';
 import './Crate.css';
 
 const Crate = ({ name, onClick }) => (

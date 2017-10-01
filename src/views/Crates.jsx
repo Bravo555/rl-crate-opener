@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Crate from '../Crate';
+import Crate from '../components/Crate';
 import './Crates.css';
 
 class Crates extends Component {
