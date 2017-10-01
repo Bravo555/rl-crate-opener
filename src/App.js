@@ -1,19 +1,39 @@
 import React, { Component } from 'react';
 import './App.css';
-import Crate from './Crate';
+import Crates from './views/Crates';
+import Preview from './views/Preview';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentScreen: 'crates'
+    }
+  }
+  
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-			<h1>Choose crate to open:</h1>
-		</div>
-		<div className="cratesList">
-			<Crate name="overdrive"/>
-		</div>
-      </div>
-    );
+    let screen;
+
+    switch(this.state.currentScreen) {
+    case 'crates':
+      screen = <Crates onCrateClick={(crateType) =>
+        this.setState({currentScreen: 'preview', crateType: crateType})
+        
+      } />
+      break;
+
+    case 'preview':
+      screen = <Preview
+        onBackClick={() => this.setState({currentScreen: 'crates'})}
+        crateType={this.state.crateType}
+      />
+      break;
+      
+    default:
+      screen = <Crates />
+    }
+  
+    return screen;
   }
 }
 

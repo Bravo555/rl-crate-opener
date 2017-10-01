@@ -5,8 +5,8 @@ import crateTypes from './crateTypes.js';
 
 import './Crate.css';
 
-const Crate = ({ name }) => (
-	<a href="#">
+const Crate = ({ name, onClick }) => (
+	<a href="#" onClick={() => onClick(name)}>
 		<div className={`crate crate-${name}`}>
 			<div className="crate-desc">{crateTypes.reduce(crate => crate.name === 'overdrive').description}</div>
 		</div>
@@ -14,7 +14,8 @@ const Crate = ({ name }) => (
 );
 
 Crate.propTypes = {
-	name: PropTypes.string.isRequired
+	name: PropTypes.string.isRequired,
+	onClick: PropTypes.func.isRequired
 };
 
 export default Crate;

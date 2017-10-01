@@ -1,0 +1,12 @@
+.crate-contents {
+	width: 310px;
+	height: 300px;
+	overflow-y: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.crate-item {
+	width: 100px;
+	height: 100px;
+}
