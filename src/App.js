@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Crates from './views/Crates';
 import Preview from './views/Preview';
+import crateTypes from './crateTypes';
 
 class App extends Component {
   constructor(props) {
@@ -17,8 +18,7 @@ class App extends Component {
     switch(this.state.currentScreen) {
     case 'crates':
       screen = <Crates onCrateClick={(crateType) =>
-        this.setState({currentScreen: 'preview', crateType: crateType})
-        
+        this.setState({ currentScreen: 'preview', crateType: crateTypes.reduce(crate => crate.type === crateType)})
       } />
       break;
 
@@ -28,7 +28,7 @@ class App extends Component {
         crateType={this.state.crateType}
       />
       break;
-      
+
     default:
       screen = <Crates />
     }
