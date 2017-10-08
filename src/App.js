@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentScreen: 'crates'
+      currentScreen: 'crates',
+      inventory: []
     }
   }
   
@@ -34,6 +35,7 @@ class App extends Component {
       screen = <Opening
         crate={this.state.crateType}
         onBackClick={() => this.setState({currentScreen: 'preview'})}
+        onRandomizingDone={(randomizedItem) => this.setState({inventory: [...this.state.inventory, randomizedItem]})}
       />
       break;
 
