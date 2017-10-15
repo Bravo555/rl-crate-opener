@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Item from '../components/Item';
 import './Preview.css';
 
 const Preview = ({crateType, onBackClick, onOpenClick}) => (
@@ -10,7 +10,7 @@ const Preview = ({crateType, onBackClick, onOpenClick}) => (
 		<h2>Contents:</h2>
 		<div className="crate-contents">
 			{crateType.items.map(item => (
-				<div className="crate-item" key={item}>{item}</div>
+				<Item key={item.name} item={item}/>
 			))}
 		</div>
 		<button onClick={onOpenClick}>Open</button>
